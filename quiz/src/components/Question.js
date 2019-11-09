@@ -96,7 +96,7 @@ export default connect(mapStateToProps, {getHtmlquiz,
   })(Question)
 
 const Wrapper = styled.div`
-  height: 84vh;
+  height: 88vh;
   width: 80%;
   margin: auto;
   padding-top: 2rem;
