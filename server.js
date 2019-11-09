@@ -7,6 +7,7 @@ dotenv.config({
 })
 
 const DB = process.env.MONGO_URI;
+const PORT =  proces.env.PORT;
 
 mongoose.connect(DB, {
     useFindAndModify: false,
@@ -16,5 +17,5 @@ mongoose.connect(DB, {
 })
 .then (() => console.log('connected to the database'))
 
-const PORT = 5000;
+
 app.listen(PORT, () => console.log('the server is connected'))
