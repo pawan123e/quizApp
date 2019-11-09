@@ -68,6 +68,9 @@ align-items: center;
         }
     }
 }
+@media  (max-width: 995px) and  (max-height: 500px) { 
+    height: 15vh;
+}
 @media(max-width: 410px) { 
     padding: 0.4rem 1rem;
     .list {
@@ -75,11 +78,5 @@ align-items: center;
             padding-left: 0.8rem;
     }
 }
-@media screen and (max-height: 500px) { 
-    height: 49px;
-    .list {
-        .links{
-            padding-left: 0.8rem;
-    }
-}
+
 `

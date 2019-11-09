@@ -148,4 +148,8 @@ const Wrapper = styled.div`
       margin-bottom: -1rem;
   }
   }
+  @media(max-height: 500px) { 
+    height: 100%;
+    padding: 1rem 0;
+}
 `

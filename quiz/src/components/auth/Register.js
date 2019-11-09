@@ -135,4 +135,7 @@ form{
         }
     }
 }
+@media(max-height: 500px) { 
+    height: 110vh;
+}
 `

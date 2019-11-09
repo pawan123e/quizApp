@@ -97,6 +97,11 @@ h1 {
           }
       }   
 }
+
+@media(max-height: 500px)  { 
+  height: 120vh;
+}
+
 @media(max-width: 400px) {
     
     .results{
@@ -110,5 +115,8 @@ h1 {
         margin-bottom: 1rem;
     }
    }
+}
+@media(max-height: 500px) and @media(max-width: 1024px) { 
+  height: 120vh;
 }
 `
