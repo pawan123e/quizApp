@@ -11,7 +11,7 @@ const Alert = ({alerts}) => alerts !== null && alerts.length > 0 && alerts.map(a
 ))
 
 const mapStateToProps = state => ({
-    alerts: state.alert
+    alerts: state.alert.alert
 })
 
 export default connect(mapStateToProps)(Alert)
