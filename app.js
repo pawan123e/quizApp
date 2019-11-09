@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const router = require('./routes/userRoute')
 const errorController = require('./controller/errorController')
+const path = require('path')
 
 app.use(express.json())
 app.use('/api/user', router);
