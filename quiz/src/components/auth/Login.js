@@ -202,4 +202,8 @@ color: white;
     }
     
 }
+@media(max-height: 500px) { 
+    height: 110vh;
+    padding: 0.5rem 0;
+}
 `

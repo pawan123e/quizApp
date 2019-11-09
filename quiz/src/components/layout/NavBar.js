@@ -75,4 +75,11 @@ align-items: center;
             padding-left: 0.8rem;
     }
 }
+@media screen and (max-height: 500px) { 
+    height: 49px;
+    .list {
+        .links{
+            padding-left: 0.8rem;
+    }
+}
 `
