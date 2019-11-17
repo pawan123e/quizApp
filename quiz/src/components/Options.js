@@ -97,7 +97,7 @@ const SmallWrapper = styled.div`
      height: 100%;
      width: 100%;
     }  
-@media(max-width: 485px) {
+@media(max-width: 650px) {
     #text {
         display:block;
         width:100%;

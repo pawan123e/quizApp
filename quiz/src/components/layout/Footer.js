@@ -12,7 +12,7 @@ const Footer = () => {
 export default Footer
 const Wrap = styled.div`
 background: #333;
-height: 50px;
+//height: 50px;
 padding: 0.3rem 3rem;
 color: white;
 text-align: center;
@@ -20,8 +20,11 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 text-align: center;
+position: "fixed",
+left: "0",
+bottom: "0",
  @media(max-width: 450px) { 
-     padding: 0.8rem 1rem;
-        height: 70px;
+        padding: 0.8rem 1rem;
+        //height: 70px;
  }
 `

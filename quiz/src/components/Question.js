@@ -60,6 +60,7 @@ const Question = ({
     const {question, options, correct} = currentQuestion;
     return (
    <Wrapper>
+     {console.log(window.innerHeight)}
      <div style={{display: 'flex', justifyContent: 'space-between'}}>
      <h1> {topic} Quiz </h1>
      <h1> {time} </h1>
@@ -96,7 +97,9 @@ export default connect(mapStateToProps, {getHtmlquiz,
   })(Question)
 
 const Wrapper = styled.div`
-  height: 88vh;
+  //height: 88vh;
+  min-height: 85vh;
+  height: 100%;
   width: 80%;
   margin: auto;
   padding-top: 2rem;
@@ -124,9 +127,13 @@ const Wrapper = styled.div`
       background: rgba(0,128,0,0.8)
     }
   }
-  @media(max-width : 1024px) { height: 90vh; }
+  @media(max-width : 1024px) { 
+    //height: 90vh;
+    height: 100%;
+   }
   @media(max-width : 786px) { 
-    height: 95vh;
+    //height: 95vh;
+    height: 100%;
     h1{
         font-size: 1.5rem;     
     }
@@ -142,7 +149,8 @@ const Wrapper = styled.div`
     }
   }
   @media(max-width : 430px) { 
-    height: 120vh;
+    //height: 120vh;
+    height: 100%;
     h2{
       font-size: 1.2rem;
       margin-bottom: -1rem;

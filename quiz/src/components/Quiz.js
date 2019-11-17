@@ -49,7 +49,9 @@ const mapStateToProps = state => ({
 export default connect(mapStateToProps, {clearQuestion, clearIntervals})(Quiz)
 
 const QuizQuestion = styled.div`
-background: orange;
+ //background: #f03a77;
+background: linear-gradient(to right, red , orange);
+color: white;
 height: 84vh;
 padding: 2rem 0;
 h1{
@@ -75,18 +77,21 @@ h2{
         justify-content: center;
         align-items: center;
         padding: 2rem 0;
-        background: brown;
+        border: none;
+        background: rgba(200, 200, 200, 0.1);
         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-        color: black;
+        color: white;
         button {
             margin-top: 0.5rem;
             padding: 0.4rem 0.9rem;
             color: black;
             border: none;
-            background:  rgba(0,0,0,0.6);
+            background:  none;
+            border: 1px solid white;
             transition: all 0.5s ease;
             border-radius: 3px;
             &:hover{
+                border: 1px solid black;
                 background: black;
                 color: white;
             }
@@ -99,14 +104,16 @@ h2{
 }
     @media(max-width : 786px) {
         height: 100%;
-        background: white;
+        background: linear-gradient(to right, red , orange);
         .quizs {
+            
             height: 100%;
             //margin-top: 2rem;
             //margin-bottom: 1rem;
             display: grid;
             grid-template-columns: 1fr;
             .quiz {
+            background: none;
             box-shadow: none;
         } }
 `
