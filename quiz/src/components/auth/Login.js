@@ -2,11 +2,11 @@ import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import {loginUser, clearError} from '../../actions/auth'
+import {loginUser, clearError, setGuest} from '../../actions/auth'
 import {setAlert} from '../../actions/alert'
 import Alert from '../layout/Alert'
 
-const Login = ({loginUser, history, isAuthenticated, clearError, error, setAlert}) => {
+const Login = ({loginUser, history, isAuthenticated, clearError, error, setAlert, setGuest}) => {
     
     useEffect(() => {
         document.title = 'Login'
@@ -47,8 +47,9 @@ const Login = ({loginUser, history, isAuthenticated, clearError, error, setAlert
         </form>
 
             <div className="signUp">
-                <Link className="links"><i className="fa fa-key" aria-hidden="true"></i> Forgot Password?</Link>
+                
                 <Link className="links" to='/register'><i className="fas fa-user-plus"></i> Sign Up</Link>
+                <Link className="links" onClick={() => setGuest()}> Start quiz as Guest?</Link>
             </div>
         </div>
         
@@ -61,7 +62,7 @@ const mapStateToProps = state => ({
     error: state.auth.error
 })
 
-export default connect(mapStateToProps, {loginUser, clearError, setAlert})(Login)
+export default connect(mapStateToProps, {loginUser, clearError, setAlert, setGuest})(Login)
 
 const Wrap = styled.div`
 height: 84vh;

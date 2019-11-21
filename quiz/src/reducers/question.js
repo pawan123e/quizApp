@@ -33,6 +33,7 @@ export default (state = initialState, action) => {
              questions: [],
              quizResult: [],
              currentQuestion: null,
+             checkedId: null,
              current: 0,
              length: null,
              loading: false,

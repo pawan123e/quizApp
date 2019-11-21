@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import {logout} from '../../actions/auth'
 
-const NavBar = ({isAuthenticated, user, logout}) => {
+const NavBar = ({isAuthenticated, user, logout, guest}) => {
     
     useEffect(() => {
 
@@ -19,7 +19,7 @@ const NavBar = ({isAuthenticated, user, logout}) => {
     
     const loggedIn = (
         <div className="list"> 
-            <Link to='' className="links">{user && user.name}</Link>
+            <Link to='' className="links">{user && user.name}{guest && 'Hii Guest'}</Link>
             <Link to='/login' className="links" onClick = {() => logout()}>Logout</Link>
         </div>
     )
@@ -35,7 +35,8 @@ const NavBar = ({isAuthenticated, user, logout}) => {
 
 const mapStateToProps = state => ({
     isAuthenticated: state.auth.isAuthenticated,
-    user: state.auth.user
+    user: state.auth.user,
+    guest: state.auth.guest
 })
 
 export default connect(mapStateToProps, {logout})(NavBar)
