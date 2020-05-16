@@ -43,7 +43,7 @@ export default connect(mapStateToProps, {logout})(NavBar)
 const Wrap = styled.div`
 //background: #333;
 background: #4caf50;
-background: purple;
+background: orange;
 height: 8vh;
 padding: 0.4rem 3rem;
 color: white;
