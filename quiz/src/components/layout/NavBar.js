@@ -41,9 +41,10 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps, {logout})(NavBar)
 const Wrap = styled.div`
-//background: #333;
-background: #4caf50;
-background: orange;
+background: #333;
+background: #4a3f35;
+// background: #c70039;
+// background: #2f2519;
 height: 8vh;
 padding: 0.4rem 3rem;
 color: white;
