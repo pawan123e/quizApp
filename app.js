@@ -14,6 +14,6 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 
-app.use(errorController) ;
+app.use(errorController)
 
 module.exports = app;
